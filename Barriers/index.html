@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/CSS/gallery.css">
+    <title> سواتر</title>
+    
+    
+</head>
+<body>
+    <div id="header"></div>
+    <h1>معرض اعمالنا سواتر  جدة</h1>
+    <div class="gallery">
+        <img src="/images/barrier-photos/barrier1.png" alt="Barrier Design">
+        <img src="/images/barrier-photos/barrier2.png" alt="Barrier Design">
+        <img src="/images/barrier-photos/barrier3.png" alt="Barrier Design">
+        <img src="/images/barrier-photos/barrier4.png" alt="Barrier Design">
+        <img src="/images/barrier-photos/barrier5.png" alt="Barrier Design">
+        <img src="/images/barrier-photos/barrier6.png" alt="Barrier Design">
+        <img src="/images/barrier-photos/barrier7.png" alt="Barrier Design">
+    </div>
+    <div id="footer"></div>
+    <script>
+        // جلب الهيدر
+        fetch('/includes/header.html')
+          .then(res => res.text())
+          .then(data => document.getElementById('header').innerHTML = data);
+    
+        // جلب الفوتر
+        fetch('/includes/footer.html')
+          .then(res => res.text())
+          .then(data => document.getElementById('footer').innerHTML = data);
+      </script>    
+</body>
+</html>
+
+

@@ -1,0 +1,163 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+#navMenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#navMenu li {
+    margin: 0 15px;
+}
+
+#navMenu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#navMenu li a.active {
+    color: red;
+}
+
+.btn-action {
+    background: #ff0055;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -6px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.phone {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.whatsapp {
+    background-color: #25d366;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.call {
+    background: blue;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-action {
+        display: none;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #navMenu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    #navMenu.active {
+        display: flex;
+    }
+
+    #navMenu li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
